@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6xkRMKN525M=",
+  "dgSpecHash": "pTTKy/dk2rA=",
   "success": true,
-  "projectFilePath": "C:\\Zippy\\repos\\Morris\\Morris.csproj",
+  "projectFilePath": "C:\\Zippy\\repos\\Morris\\src\\Morris.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rjmze\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\8.0.22\\microsoft.netcore.app.runtime.win-x86.8.0.22.nupkg.sha512",
     "C:\\Users\\rjmze\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.57\\microsoft.windows.sdk.net.ref.10.0.19041.57.nupkg.sha512",

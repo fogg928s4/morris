@@ -17,11 +17,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Zippy\\repos\\Morris\\Morris.csproj",
+      "projectUniqueName": "C:\\Zippy\\repos\\Morris\\src\\Morris.csproj",
       "projectName": "Morris",
-      "projectPath": "C:\\Zippy\\repos\\Morris\\Morris.csproj",
+      "projectPath": "C:\\Zippy\\repos\\Morris\\src\\Morris.csproj",
       "packagesPath": "C:\\Users\\rjmze\\.nuget\\packages\\",
-      "outputPath": "C:\\Zippy\\repos\\Morris\\obj\\",
+      "outputPath": "C:\\Zippy\\repos\\Morris\\src\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
