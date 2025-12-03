@@ -1,6 +1,13 @@
 ﻿using System.Collections.Generic;
 
-public class SpaceSystem {
-    private List<Planet> planetsSys;
-    private List<Star> starsSys;
+namespace Morris.Models {
+    public class SpaceSystem {
+        private List<Planet> planetsSys;
+        private Star mainStar;
+
+        private SpaceSystem() {
+            this.mainStar = new Star();
+            planetsSys = new List<Planet>();
+        }
+    }
 }

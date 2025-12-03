@@ -8,15 +8,15 @@
   IgnorableNamespaces="uap rescap">
 
   <Identity
-    Name="6e9adea6-2cdc-43e6-bba3-68e18d71c298"
-    Publisher="CN=jose"
+    Name="503c5f94-43f5-48ca-a91c-a2ff0dd13be6"
+    Publisher="CN=rjmze"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="6e9adea6-2cdc-43e6-bba3-68e18d71c298" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="503c5f94-43f5-48ca-a91c-a2ff0dd13be6" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>Morris</DisplayName>
-    <PublisherDisplayName>jose</PublisherDisplayName>
+    <PublisherDisplayName>fogg928s4</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -35,7 +35,7 @@
       EntryPoint="$targetentrypoint$">
       <uap:VisualElements
         DisplayName="Morris"
-        Description="Morris"
+        Description="Morris is a WinUI base software for modeling planet speed and gravitational effects"
         BackgroundColor="transparent"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png">

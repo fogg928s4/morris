@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>MAJORTOM</Machine>
+    <WindowsUser>jose</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetOsVersion>10.0</TargetOsVersion>
+    <TargetOsDescription>Windows 10.0</TargetOsDescription>
+    <SolutionConfiguration>Debug|x64</SolutionConfiguration>
+    <PackageArchitecture>x64</PackageArchitecture>
+    <PackageIdentityName>503c5f94-43f5-48ca-a91c-a2ff0dd13be6</PackageIdentityName>
+    <PackageIdentityPublisher>CN=rjmze</PackageIdentityPublisher>
+    <IntermediateOutputPath>C:\Zippy\repos\Morris\src\obj\x64\Debug\net8.0-windows10.0.19041.0\</IntermediateOutputPath>
+    <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
+    <PackageRegistrationPath>
+    </PackageRegistrationPath>
+    <RemoveNonLayoutFiles>false</RemoveNonLayoutFiles>
+    <DeployOptionalPackages>false</DeployOptionalPackages>
+    <WindowsSdkPath>
+    </WindowsSdkPath>
+    <LayoutDir>C:\Zippy\repos\Morris\src\bin\x64\Debug\net8.0-windows10.0.19041.0\AppX</LayoutDir>
+    <RegisteredManifestChecksum>ED65AFBC41F707018FC15D980E7FCB37819276252149AF924733956C05A387E5</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>503c5f94-43f5-48ca-a91c-a2ff0dd13be6_1.0.0.0_x64__dz9z5fr7jecfp</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>503c5f94-43f5-48ca-a91c-a2ff0dd13be6_dz9z5fr7jecfp!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>503c5f94-43f5-48ca-a91c-a2ff0dd13be6</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=rjmze</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Zippy\repos\Morris\src\bin\x64\Debug\net8.0-windows10.0.19041.0\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-12-03T21:48:45.485</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Zippy\repos\Morris\src\bin\x64\Debug\net8.0-windows10.0.19041.0\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2025-12-03T21:48:45.330</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Zippy\repos\Morris\src\bin\x64\Debug\net8.0-windows10.0.19041.0\Morris.runtimeconfig.json">
+      <PackagePath>Morris.runtimeconfig.json</PackagePath>
+      <Modified>2025-12-03T21:47:11.116</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Zippy\repos\Morris\src\bin\x64\Debug\net8.0-windows10.0.19041.0\Morris.dll">
+      <PackagePath>Morris.dll</PackagePath>
+      <Modified>2025-12-03T21:48:44.939</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Zippy\repos\Morris\src\obj\x64\Debug\net8.0-windows10.0.19041.0\apphost.exe">
+      <PackagePath>Morris.exe</PackagePath>
+      <Modified>2025-12-03T21:48:44.971</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Zippy\repos\Morris\src\bin\x64\Debug\net8.0-windows10.0.19041.0\Morris.deps.json">
+      <PackagePath>Morris.deps.json</PackagePath>
+      <Modified>2025-12-03T21:47:11.090</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rjmze\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.57\lib\net8.0\Microsoft.Windows.SDK.NET.dll">
+      <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
+      <Modified>2024-11-11T17:23:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rjmze\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.57\lib\net8.0\WinRT.Runtime.dll">
+      <PackagePath>WinRT.Runtime.dll</PackagePath>
+      <Modified>2024-11-11T17:23:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rjmze\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\lib\net6.0-windows10.0.18362.0\Microsoft.InteractiveExperiences.Projection.dll">
+      <PackagePath>Microsoft.InteractiveExperiences.Projection.dll</PackagePath>
+      <Modified>2024-07-31T03:45:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rjmze\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\lib\net6.0-windows10.0.18362.0\Microsoft.WinUI.dll">
+      <PackagePath>Microsoft.WinUI.dll</PackagePath>
+      <Modified>2024-08-01T22:37:30.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rjmze\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.AppLifecycle.Projection.dll">
+      <PackagePath>Microsoft.Windows.AppLifecycle.Projection.dll</PackagePath>
+      <Modified>2024-08-01T22:37:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rjmze\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.AppNotifications.Builder.Projection.dll">
+      <PackagePath>Microsoft.Windows.AppNotifications.Builder.Projection.dll</PackagePath>
+      <Modified>2024-08-01T22:37:30.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rjmze\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.AppNotifications.Projection.dll">
+      <PackagePath>Microsoft.Windows.AppNotifications.Projection.dll</PackagePath>
+      <Modified>2024-08-01T22:37:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rjmze\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.dll">
+      <PackagePath>Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.dll</PackagePath>
+      <Modified>2024-08-01T22:37:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rjmze\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.ApplicationModel.Resources.Projection.dll">
+      <PackagePath>Microsoft.Windows.ApplicationModel.Resources.Projection.dll</PackagePath>
+      <Modified>2024-06-25T19:49:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rjmze\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.dll">
+      <PackagePath>Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.dll</PackagePath>
+      <Modified>2024-08-01T22:37:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rjmze\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.Management.Deployment.Projection.dll">
+      <PackagePath>Microsoft.Windows.Management.Deployment.Projection.dll</PackagePath>
+      <Modified>2024-08-01T22:37:30.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rjmze\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.PushNotifications.Projection.dll">
+      <PackagePath>Microsoft.Windows.PushNotifications.Projection.dll</PackagePath>
+      <Modified>2024-08-01T22:37:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rjmze\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.Security.AccessControl.Projection.dll">
+      <PackagePath>Microsoft.Windows.Security.AccessControl.Projection.dll</PackagePath>
+      <Modified>2024-08-01T22:37:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rjmze\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.System.Power.Projection.dll">
+      <PackagePath>Microsoft.Windows.System.Power.Projection.dll</PackagePath>
+      <Modified>2024-08-01T22:37:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rjmze\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.System.Projection.dll">
+      <PackagePath>Microsoft.Windows.System.Projection.dll</PackagePath>
+      <Modified>2024-08-01T22:37:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rjmze\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.Widgets.Projection.dll">
+      <PackagePath>Microsoft.Windows.Widgets.Projection.dll</PackagePath>
+      <Modified>2024-03-28T23:55:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rjmze\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\lib\net6.0-windows10.0.18362.0\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll">
+      <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.Net.dll</PackagePath>
+      <Modified>2024-08-01T22:37:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rjmze\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\runtimes\win-arm64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
+      <PackagePath>runtimes\win-arm64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
+      <Modified>2024-06-25T19:49:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rjmze\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\runtimes\win-x64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
+      <PackagePath>runtimes\win-x64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
+      <Modified>2024-06-25T19:48:44.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rjmze\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\runtimes\win-x86\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
+      <PackagePath>runtimes\win-x86\native\Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
+      <Modified>2024-06-25T19:48:54.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rjmze\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\runtimes\win10-arm64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
+      <PackagePath>runtimes\win10-arm64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
+      <Modified>2024-06-25T19:49:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rjmze\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\runtimes\win10-x64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
+      <PackagePath>runtimes\win10-x64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
+      <Modified>2024-06-25T19:48:44.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rjmze\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\runtimes\win10-x86\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
+      <PackagePath>runtimes\win10-x86\native\Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
+      <Modified>2024-06-25T19:48:54.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Zippy\repos\Morris\src\Assets\LockScreenLogo.scale-200.png">
+      <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
+      <Modified>2025-06-11T03:44:13.822</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Zippy\repos\Morris\src\Assets\SplashScreen.scale-200.png">
+      <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
+      <Modified>2025-06-11T03:44:13.830</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Zippy\repos\Morris\src\Assets\Square150x150Logo.scale-200.png">
+      <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
+      <Modified>2025-06-11T03:44:13.832</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Zippy\repos\Morris\src\Assets\Square44x44Logo.scale-200.png">
+      <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
+      <Modified>2025-06-11T03:44:13.835</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Zippy\repos\Morris\src\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+      <Modified>2025-06-11T03:44:13.837</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Zippy\repos\Morris\src\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <Modified>2025-06-11T03:44:13.840</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Zippy\repos\Morris\src\Assets\Wide310x150Logo.scale-200.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
+      <Modified>2025-06-11T03:44:13.842</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Users\rjmze\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.5.msix">
+      <Name>Microsoft.WindowsAppRuntime.1.5</Name>
+      <Version>5001.214.1843.0</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.5, MinVersion = 5001.214.1843.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\rjmze\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.5.msix</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\rjmze\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.5.msix">
+      <Name>Microsoft.WindowsAppRuntime.1.5</Name>
+      <Version>5001.214.1843.0</Version>
+      <Architecture>win32</Architecture>
+      <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.5, MinVersion = 5001.214.1843.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\rjmze\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.5.msix</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\rjmze\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\buildTransitive\..\tools\MSIX\win10-x64\Microsoft.WindowsAppRuntime.1.5.msix">
+      <Name>Microsoft.WindowsAppRuntime.1.5</Name>
+      <Version>5001.214.1843.0</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.5, MinVersion = 5001.214.1843.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\rjmze\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\buildTransitive\..\tools\MSIX\win10-x64\Microsoft.WindowsAppRuntime.1.5.msix</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\rjmze\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\buildTransitive\..\tools\MSIX\win10-arm64\Microsoft.WindowsAppRuntime.1.5.msix">
+      <Name>Microsoft.WindowsAppRuntime.1.5</Name>
+      <Version>5001.214.1843.0</Version>
+      <Architecture>arm64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.5, MinVersion = 5001.214.1843.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\rjmze\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\buildTransitive\..\tools\MSIX\win10-arm64\Microsoft.WindowsAppRuntime.1.5.msix</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

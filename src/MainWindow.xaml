@@ -7,13 +7,83 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Title="Morris">
+    Title="Morris"
+    >
 
-    <Window.SystemBackdrop>
-        <MicaBackdrop />
-    </Window.SystemBackdrop>
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Background="#CCD5F0">
+            
+            <!--Toggle btn with a custom glyph-->
+            <ToggleButton x:Name="pencilBtn" IsChecked="True" Width="45" Height="45" Click="pencilBtn_Click">
+                <FontIcon Foreground="Black" Glyph="&#xED63;"/>
+            </ToggleButton>
+            <ToggleButton x:Name="brushBtn" Width="45" Height="45" Click="brushBtn_Click">
+                <FontIcon Foreground="Black" Glyph="&#xE771;"/>
+            </ToggleButton>
+            
+            <ToggleButton x:Name="eraserBtn" Width="45" Height="45" Click="eraserBtn_Click">
+                <FontIcon Foreground="Black" Glyph="&#xE75C;"/>
+            </ToggleButton>
+            
+            <ToggleButton x:Name="clsBtn" Width="45" Height="45" Click="clsBtn_Click">
+                <FontIcon Foreground="Black" Glyph="&#xE894;"/>
+            </ToggleButton>
 
+            <ToggleButton x:Name="colorPickrBtn" Width="45" Height="45" Click="colorPickrBtn_Click">
+                <FontIcon Foreground="Black" Glyph="&#xE771;"/>
+            </ToggleButton>
+            <!--Controls the currently selected brush colour-->
+            <SplitButton x:Name="colorBtn" Foreground="Black" Padding="0" MinHeight="0" MinWidth="0" VerticalAlignment="Top">
+                <Border x:Name="currentColor" Width="45" Height="45" Background="Black" Margin="0" CornerRadius="5,5,5,5"/>
+                <SplitButton.Flyout>
+                    <Flyout Placement="Bottom">
+                        <ColorPicker x:Name="colorPicker" ColorSpectrumShape="Box" IsMoreButtonVisible="False" IsColorSliderVisible="True"
+                                 IsColorChannelTextInputVisible="False" IsHexInputVisible="True" IsAlphaEnabled="False" IsAlphaSliderVisible="True"
+                                 ColorChanged="colorPicker_ColorChanged"/>
+                        <!--Color Changed is the event handler-->
+                    </Flyout>
+                </SplitButton.Flyout>
+            </SplitButton>
+
+            <!--For the background colour -->
+            <SplitButton x:Name="backColorBtn" Foreground="Black" Padding="0" MinHeight="0" MinWidth="0" VerticalAlignment="Top">
+                <Border x:Name="backgColor" Width="45" Height="45" Background="White" Margin="0" CornerRadius="5,5,5,5"/>
+                <SplitButton.Flyout>
+                    <Flyout Placement="Bottom">
+                        <ColorPicker x:Name="backColorPicker" ColorSpectrumShape="Box" IsMoreButtonVisible="False" IsColorSliderVisible="True"
+                     IsColorChannelTextInputVisible="False" IsHexInputVisible="True" IsAlphaEnabled="False" IsAlphaSliderVisible="True"
+                     ColorChanged="backColorPicker_ColorChanged"/>
+                        <!--Color Changed is the event handler-->
+                    </Flyout>
+                </SplitButton.Flyout>
+            </SplitButton>
+            <!--for he brushes-->
+            <ComboBox x:Name="comboBrushThick" Foreground="Black" ItemsSource="{x:Bind brushThick}"
+                      SelectedIndex="4" Width="80" Height="45"
+                      ScrollViewer.VerticalScrollBarVisibility="Visible" SelectionChanged="comboBrushThick_SelectionChanged"/>
+            
+            <!--For the shapes btn-->
+            <ToggleButton x:Name="shapesBtn" Width="45" Height="45" Click="shapesBtn_Click">
+                <FontIcon Foreground="Black" Glyph="&#xF156;"/>
+            </ToggleButton>
+
+            <!--now for the thickness and shape-->
+            <ComboBox Foreground="Black" x:Name="ComboShapes" SelectedIndex="0" Width="100" Height="45" SelectionChanged="ComboShapes_SelectionChanged">
+                <ComboBoxItem Content="Circle"/>
+                <ComboBoxItem Content="Rectangle"/>
+                <ComboBoxItem Content="Triangle"/>
+            </ComboBox>
+
+        </StackPanel>
+
+        <Canvas x:Name="canvas" Grid.Row="1" Background="White" PointerPressed="canvas_PointerPressed"
+                PointerMoved="canvas_PointerMoved" PointerReleased="canvas_PointerReleased"/>
     </Grid>
+
+
 </Window>
