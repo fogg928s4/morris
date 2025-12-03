@@ -1,9 +1,9 @@
 {
   "profiles": {
-    "DrawIt (Package)": {
+    "Morris (Package)": {
       "commandName": "MsixPackage"
     },
-    "DrawIt (Unpackaged)": {
+    "Morris (Unpackaged)": {
       "commandName": "Project"
     }
   }
