@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Morris")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+68b445e41b523df626f646b81dfb9c674a161130")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+86f30d67ac61987c107728e156c93282f2cfda84")]
 [assembly: System.Reflection.AssemblyProductAttribute("Morris")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Morris")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
