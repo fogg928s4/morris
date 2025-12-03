@@ -16,15 +16,16 @@ using Windows.Foundation.Collections;
 using Windows.UI;
 using Windows.UI.Core;
 using Microsoft.UI.Xaml.Shapes;
+using Morris;
 
 
-namespace Morris
+namespace Morris.Helpers
 {
 
-    public sealed partial class MainWindow : Window
+    public sealed partial class BodyHelperWindow : Window
     {
         //initializes main window
-        public MainWindow() {
+        public BodyHelperWindow() {
             
             this.InitializeComponent();
             Title = "Morris";

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Window
-    x:Class="Morris.MainWindow"
+    x:Class="Morris.Helpers.BodyHelperWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Morris"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Title="Morris"
+    Title="Create Body"
     >
 
 
@@ -15,18 +15,13 @@
                         PaneDisplayMode="Left"
                         IsTabStop="False">
         <NavigationView.MenuItems>
-            <NavigationViewItem Content="Add Body Mass" Icon="Add" ToolTipService.ToolTip="Account" Tag="SamplePage2">
+            <NavigationViewItem Content="Add Body Mass" Icon="AddTo" ToolTipService.ToolTip="Account" Tag="SamplePage2">
                 <NavigationViewItem.MenuItems>
-                    <NavigationViewItem 
-                        Content="Add Star" 
-                        Icon="SolidStar" 
-                        ToolTipService.ToolTip="Add a Star to Current Simulation"
-                        Tag="SamplePage3"
-                        />
-                    <NavigationViewItem Content="Add Planet" Icon="World" ToolTipService.ToolTip="Add a Planet to Current Simulation" Tag="SamplePage4"/>
+                    <NavigationViewItem Content="Add Star" Icon="FavoriteStarFill" ToolTipService.ToolTip="Mail" Tag="SamplePage3"/>
+                    <NavigationViewItem Content="Add Planet" Icon="World" ToolTipService.ToolTip="Calendar" Tag="SamplePage4"/>
                 </NavigationViewItem.MenuItems>
             </NavigationViewItem>
-            <NavigationViewItem Content="Simulation Options" Icon="Page2" ToolTipService.ToolTip="Document options" SelectsOnInvoked="False">
+            <NavigationViewItem Content="Document options" Icon="Page2" ToolTipService.ToolTip="Document options" SelectsOnInvoked="False">
                 <NavigationViewItem.MenuItems>
                     <NavigationViewItem Content="Create new" Icon="NewFolder" ToolTipService.ToolTip="Create new" Tag="SamplePage5"/>
                     <NavigationViewItem Content="Upload file" Icon="OpenLocal" ToolTipService.ToolTip="Upload file" Tag="SamplePage6"/>
