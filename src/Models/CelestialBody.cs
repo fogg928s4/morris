@@ -9,10 +9,8 @@ using System;
 namespace Morris.Models {
     public abstract class CelestialBody {
         
-        protected String name = "";
-        protected Double baseMass; // mass
-        protected double trueMass;
-        protected int massOrderPower;
+        protected String name;
+        protected Double mass; // mass in Earth masses
         protected String hexColor = "000000";
 
         // Properties
@@ -21,11 +19,8 @@ namespace Morris.Models {
             set { name = value; }
         }
         public double Mass {
-            get { return baseMass; }
-            set {
-                baseMass = value;
-                trueMass = baseMass * Math.Pow(10, massOrderPower);
-            }
+            get { return mass; }
+            set { mass = value; }
         }
         public String HexColor { 
             get { return hexColor; } 

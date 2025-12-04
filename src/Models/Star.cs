@@ -8,28 +8,14 @@ namespace Morris.Models {
     internal class Star : CelestialBody {
 
         // Constructors
+        // Constructors
         public Star() {
             this.name = "Sun";
-            this.baseMass = 1.998;
-            this.massOrderPower = 30;
-            this.trueMass = baseMass * Math.Pow(10, massOrderPower);
+            this.mass = 5.97;
         }
-        public Star(string name, double baseMass) {
+        public Star(string name, double mass) {
             this.name = name;
-            this.baseMass = baseMass;
-            this.massOrderPower = 30;
-            this.trueMass = this.baseMass * Math.Pow(10, massOrderPower);
-        }
-        public Star(string name) {
-            this.name = name;
-            this.baseMass = 5.97;
-            this.massOrderPower = 24;
-            this.trueMass = baseMass * Math.Pow(10, massOrderPower);
-        }
-
-
-        public int MassOrderPower {
-            set { massOrderPower = 30; }
+            this.mass = mass;
         }
     }
 }

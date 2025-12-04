@@ -7,26 +7,12 @@ namespace Morris.Models {
         // Constructors
         public Planet() {
             this.name = "Earth";
-            this.baseMass = 5.97;
-            this.massOrderPower = 24;
-            this.trueMass = baseMass * Math.Pow(10, massOrderPower);
+            this.mass = 5.97;
         }
-        public Planet(string name, double baseMass) {
+        public Planet(string name, double mass) {
             this.name = name;
-            this.baseMass = baseMass;
-            this.massOrderPower = 24;
-            this.trueMass = this.baseMass * Math.Pow(10, massOrderPower);
-        }
-        public Planet(string name) {
-            this.name = name;
-            this.baseMass = 5.97;
-            this.massOrderPower = 24;
-            this.trueMass = baseMass * Math.Pow(10, massOrderPower);
+            this.mass = mass;
         }
 
-
-        public int MassOrderPower {
-            set { massOrderPower = 24; }
-        }
     }
 }
