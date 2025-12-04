@@ -15,8 +15,8 @@ To edit the project, the `.sln` and `.csproj` files can be found inside the `src
 
 The project's name is not that of a famous scientist or formula, but that of the picture below:
 
-<div style="text-align: center">
+<div align="center">
 
-![Morris the dog](./img/morris.jpg)
+<img src="./img/morris.jpg" alt="Morris the dog"/>
 
 </div>
