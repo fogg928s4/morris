@@ -18,26 +18,28 @@
                     IsTabStop="False"
                     ItemInvoked="Navigate_Invoke">
         <NavigationView.MenuItems>
-            <NavigationViewItem Content="Add Body Mass" 
-                                Icon="Add" 
-                                ToolTipService.ToolTip="Add a new body to Current Simulation" 
-                                Tag="AddBody">
+            <NavigationViewItem x:Name="viewSimNavItem"
+                Content="View Simulation"
+                ToolTipService.ToolTip="View your current simulation" Icon="View"/>
+            <NavigationViewItem x:Name="addBodyNavItem"
+                    Content="Add Body Mass" 
+                    Icon="Add" 
+                    ToolTipService.ToolTip="Add a new body to Current Simulation" 
+                    Tag="AddBody">
                 <NavigationViewItem.MenuItems>
-                    <NavigationViewItem 
+                    <NavigationViewItem x:Name="addStarNavItem"
                         Content="Add Star" 
                         Icon="SolidStar" 
                         ToolTipService.ToolTip="Add a Star to Current Simulation"
-                        Tag="AddStarPage"
-                    />
-                    <NavigationViewItem 
+                        Tag="AddStarPage"/>
+                    <NavigationViewItem x:Name="addPlanetNavItem"
                         Content="Add Planet" 
                         Icon="World" 
                         ToolTipService.ToolTip="Add a Planet to Current Simulation"
-                        Tag="AddPlanetPage"
-                    />
+                        Tag="AddPlanetPage"/>
                 </NavigationViewItem.MenuItems>
             </NavigationViewItem>
-            <NavigationViewItem 
+            <NavigationViewItem x:Name="editOptNavItem"
                 Content="Edit Simulation Options" 
                 Icon="Edit" 
                 ToolTipService.ToolTip="Document options" 

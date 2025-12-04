@@ -25,6 +25,12 @@ namespace Morris {
                 case "Add Planet":
                     MainContentFrame.Navigate(typeof (Pages.CreatePlanetPage));
                     break;
+                case "View Simulation":
+                    MainContentFrame.Navigate(typeof(Pages.SimulationPage));
+                    break;
+                case "Settings":
+                    MainContentFrame.Navigate(typeof(Pages.SettingsPage));
+                    break;
             }
         }
     }
