@@ -19,21 +19,42 @@
             FontWeight="Bold"
             TextAlignment="Left"
             HorizontalAlignment="Left"
-            Margin="0,20,0,20"/>
+            Margin="0,15,0,15"/>
         <StackPanel Grid.Row="1" Grid.Column="0" Padding="20" Spacing="10" HorizontalAlignment="Center">
+            <!--Name-->
             <TextBlock x:Name="labelStarName" Text="Name of the Star" FontSize="16" FontWeight="Normal" Margin="10"/>
             <TextBox x:Name="starNameTxtBox" PlaceholderText="Enter the name of the star" MinWidth="400"/>
-        </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="1" Padding="20" Spacing="10" HorizontalAlignment="Center">
+            
+            <!--Mass of the sat-->
             <TextBlock x:Name="labelStarMass" Text="Mass of the Star (in Sun Masses)" FontSize="16" FontWeight="Normal" Margin="10"/>
             <Slider
                 x:Name="starMassSlider"
-                TickFrequency="20"
-                Minimum="1" Maximum="100"         
-                TickPlacement="Outside"
-                SnapsTo="StepValues" />
+
+                StepFrequency="0.1"
+                Minimum="0.01" Maximum="10"         
+                SnapsTo="StepValues" 
+            />
+
+            <TextBlock x:Name="colorStarName" Text="Pick the Color of the Star" FontSize="16" FontWeight="Normal" Margin="10"/>
+            <SplitButton x:Name="starColorBtn" Foreground="Black" Padding="0" MinHeight="0" MinWidth="0" VerticalAlignment="Top">
+                <Border x:Name="starColor" Width="45" Height="45" Background="White" Margin="0" CornerRadius="5,5,5,5"/>
+                <SplitButton.Flyout>
+                    <Flyout Placement="Bottom">
+                        <ColorPicker x:Name="starColorPicker" ColorSpectrumShape="Box" IsMoreButtonVisible="False" IsColorSliderVisible="True"
+                     IsColorChannelTextInputVisible="False" IsHexInputVisible="True" IsAlphaEnabled="False" IsAlphaSliderVisible="True"
+                                     ColorChanged="StarColorPicker_ColorChanged"/>
+                        <!--Color Changed is the event handler-->
+                    </Flyout>
+                </SplitButton.Flyout>
+            </SplitButton>
+
+            <Button Grid.Row="3" x:Name="createStarBtn" Content="Create Star" 
+                    Background="{ThemeResource AccentTextFillColorTertiaryBrush}"
+                    Foreground="{ThemeResource TextOnAccentFillColorPrimaryBrush}"
+                    HorizontalAlignment="Right" 
+                    Click="CreateStarBtn_Click"/>
         </StackPanel>
+
         
-        <Button Grid.Row="3" x:Name="createStarBtn" Content="AAAAAAAAAAAa"/>
     </Grid>
 </Page>

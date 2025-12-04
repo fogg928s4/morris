@@ -28,7 +28,12 @@ namespace Morris.Pages
         public CreateStarPage() {
             this.InitializeComponent();
         }
+        private void StarColorPicker_ColorChanged(ColorPicker sender, ColorChangedEventArgs args) {
 
-       
+        }
+        private void CreateStarBtn_Click(object sender, RoutedEventArgs args) {
+
+        }
+
     }
 }

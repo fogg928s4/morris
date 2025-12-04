@@ -16,7 +16,8 @@ using Windows.Foundation.Collections;
 using Windows.UI;
 using Windows.UI.Core;
 using Microsoft.UI.Xaml.Shapes;
-
+using Morris.Models;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Morris
 {
@@ -25,11 +26,12 @@ namespace Morris
     {
         //initializes main window
         public MainWindow() {
-            
             this.InitializeComponent();
             Title = "Morris";
         }
 
-       
+        private StarSystem currentSymulation = new StarSystem();
+
+
     }
 }

@@ -10,23 +10,50 @@
     >
 
     <Grid>
-       <Grid.RowDefinitions>
-           <RowDefinition Height="Auto"/>
-           <RowDefinition Height="*"/>
-       </Grid.RowDefinitions>
-       <StackPanel Grid.Row="0" Orientation="Horizontal" Background="#CCD5F0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Create a Planet"
+        FontSize="32"
+        FontWeight="Bold"
+        TextAlignment="Left"
+        HorizontalAlignment="Left"
+        Margin="0,15,0,15"/>
+        <StackPanel Grid.Row="1" Grid.Column="0" Padding="20" Spacing="10" HorizontalAlignment="Center">
+            <!--Name-->
+            <TextBlock x:Name="labelPlanetName" Text="Name of the Planet" FontSize="16" FontWeight="Normal" Margin="10"/>
+            <TextBox x:Name="planetNameTxtBox" PlaceholderText="Enter the name of the planet" MinWidth="400"/>
 
-           <!--Toggle btn with a custom glyph-->
-           <ToggleButton x:Name="pencilBtn" IsChecked="True" Width="45" Height="45">
-               <FontIcon Foreground="Red" Glyph="&#xED63;"/>
-           </ToggleButton>
-           <ToggleButton x:Name="brushBtn" Width="45" Height="45">
-               <FontIcon Foreground="Red" Glyph="&#xE771;"/>
-           </ToggleButton>
+            <!--Mass of the planet-->
+            <TextBlock x:Name="labelPlanetMass" Text="Mass of the Planet (in Earth Masses)" FontSize="16" FontWeight="Normal" Margin="10"/>
+            <Slider
+            x:Name="planetMassSlider"
+            TickFrequency="20"
+            Minimum="1" Maximum="100"         
+            TickPlacement="Outside"
+            SnapsTo="StepValues" />
 
-           <ToggleButton x:Name="eraserBtn" Width="45" Height="45">
-               <FontIcon Foreground="Red" Glyph="&#xE75C;"/>
-           </ToggleButton>
-       </StackPanel>
+            <TextBlock x:Name="colorPlanetName" Text="Pick the Color of the Planet" FontSize="16" FontWeight="Normal" Margin="10"/>
+            <SplitButton x:Name="planetColorBtn" Foreground="Black" Padding="0" MinHeight="0" MinWidth="0" VerticalAlignment="Top">
+                <Border x:Name="planetColor" Width="45" Height="45" Background="White" Margin="0" CornerRadius="5,5,5,5"/>
+                <SplitButton.Flyout>
+                    <Flyout Placement="Bottom">
+                        <ColorPicker x:Name="planetColorPicker" ColorSpectrumShape="Box" IsMoreButtonVisible="False" IsColorSliderVisible="True"
+                 IsColorChannelTextInputVisible="False" IsHexInputVisible="True" IsAlphaEnabled="False" IsAlphaSliderVisible="True"
+                                 ColorChanged="PlanetColorPicker_ColorChanged"/>
+                        <!--Color Changed is the event handler-->
+                    </Flyout>
+                </SplitButton.Flyout>
+            </SplitButton>
+
+            <Button Grid.Row="3" x:Name="createPlanetBtn" Content="Create Planet" 
+                Background="{ThemeResource AccentTextFillColorTertiaryBrush}"
+                Foreground="{ThemeResource TextOnAccentFillColorPrimaryBrush}"
+                HorizontalAlignment="Right" 
+                Click="CreatePlanetBtn_Click"/>
+        </StackPanel>
+
+
     </Grid>
 </Page>

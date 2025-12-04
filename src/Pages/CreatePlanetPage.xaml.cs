@@ -29,6 +29,13 @@ namespace Morris.Pages
             this.InitializeComponent();
         }
 
-       
+        private void PlanetColorPicker_ColorChanged(ColorPicker sender, ColorChangedEventArgs args) {
+
+        }
+        private void CreatePlanetBtn_Click(object sender, RoutedEventArgs args) {
+
+        }
+
+
     }
 }

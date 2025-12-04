@@ -1,13 +1,14 @@
 ﻿using System.Collections.Generic;
 
 namespace Morris.Models {
-    public class SpaceSystem {
+
+    public class StarSystem {
         private List<Planet> planetsSys;
         private Star mainStar;
 
-        private SpaceSystem() {
+        public StarSystem() {
             this.mainStar = new Star();
-            planetsSys = new List<Planet>();
+            this.planetsSys = new List<Planet>();
         }
     }
 }
