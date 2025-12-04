@@ -8,25 +8,32 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     >
-
+    
     <Grid>
        <Grid.RowDefinitions>
            <RowDefinition Height="Auto"/>
            <RowDefinition Height="*"/>
        </Grid.RowDefinitions>
-       <StackPanel Grid.Row="0" Orientation="Horizontal" Background="#CCD5F0">
-
-           <!--Toggle btn with a custom glyph-->
-           <ToggleButton x:Name="pencilBtn" IsChecked="True" Width="45" Height="45">
-               <FontIcon Foreground="Black" Glyph="&#xED63;"/>
-           </ToggleButton>
-           <ToggleButton x:Name="brushBtn" Width="45" Height="45">
-               <FontIcon Foreground="Black" Glyph="&#xE771;"/>
-           </ToggleButton>
-
-           <ToggleButton x:Name="eraserBtn" Width="45" Height="45">
-               <FontIcon Foreground="Black" Glyph="&#xE75C;"/>
-           </ToggleButton>
-       </StackPanel>
+        <TextBlock Grid.Row="0" Text="Create a Star"
+            FontSize="32"
+            FontWeight="Bold"
+            TextAlignment="Left"
+            HorizontalAlignment="Left"
+            Margin="0,20,0,20"/>
+        <StackPanel Grid.Row="1" Grid.Column="0" Padding="20" Spacing="10" HorizontalAlignment="Center">
+            <TextBlock x:Name="labelStarName" Text="Name of the Star" FontSize="16" FontWeight="Normal" Margin="10"/>
+            <TextBox x:Name="starNameTxtBox" PlaceholderText="Enter the name of the star" MinWidth="400"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1" Padding="20" Spacing="10" HorizontalAlignment="Center">
+            <TextBlock x:Name="labelStarMass" Text="Mass of the Star (in Sun Masses)" FontSize="16" FontWeight="Normal" Margin="10"/>
+            <Slider
+                x:Name="starMassSlider"
+                TickFrequency="20"
+                Minimum="1" Maximum="100"         
+                TickPlacement="Outside"
+                SnapsTo="StepValues" />
+        </StackPanel>
+        
+        <Button Grid.Row="3" x:Name="createStarBtn" Content="AAAAAAAAAAAa"/>
     </Grid>
 </Page>
