@@ -19,16 +19,14 @@ using Microsoft.UI.Xaml.Shapes;
 using Morris;
 
 
-namespace Morris.Helpers
+namespace Morris.Pages
 {
 
-    public sealed partial class BodyHelperWindow : Window
+    public sealed partial class CreatePlanetPage : Page
     {
         //initializes main window
-        public BodyHelperWindow() {
-            
+        public CreatePlanetPage() {
             this.InitializeComponent();
-            Title = "Morris";
         }
 
        

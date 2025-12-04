@@ -11,49 +11,42 @@
     >
 
 
-    <NavigationView x:Name="nvSample8" Grid.Row="1" Height="460"
-                        PaneDisplayMode="Left"
-                        IsTabStop="False">
+    <NavigationView x:Name="mainNavigation" 
+                    Grid.Row="1" 
+                    Height="460"
+                    PaneDisplayMode="Left"
+                    IsTabStop="False"
+                    ItemInvoked="Navigate_Invoke">
         <NavigationView.MenuItems>
-            <NavigationViewItem Content="Add Body Mass" Icon="Add" ToolTipService.ToolTip="Account" Tag="SamplePage2">
+            <NavigationViewItem Content="Add Body Mass" 
+                                Icon="Add" 
+                                ToolTipService.ToolTip="Add a new body to Current Simulation" 
+                                Tag="AddBody">
                 <NavigationViewItem.MenuItems>
                     <NavigationViewItem 
                         Content="Add Star" 
                         Icon="SolidStar" 
                         ToolTipService.ToolTip="Add a Star to Current Simulation"
-                        Tag="SamplePage3"
-                        />
-                    <NavigationViewItem Content="Add Planet" Icon="World" ToolTipService.ToolTip="Add a Planet to Current Simulation" Tag="SamplePage4"/>
+                        Tag="AddStarPage"
+                    />
+                    <NavigationViewItem 
+                        Content="Add Planet" 
+                        Icon="World" 
+                        ToolTipService.ToolTip="Add a Planet to Current Simulation"
+                        Tag="AddPlanetPage"
+                    />
                 </NavigationViewItem.MenuItems>
             </NavigationViewItem>
-            <NavigationViewItem Content="Simulation Options" Icon="Page2" ToolTipService.ToolTip="Document options" SelectsOnInvoked="False">
-                <NavigationViewItem.MenuItems>
-                    <NavigationViewItem Content="Create new" Icon="NewFolder" ToolTipService.ToolTip="Create new" Tag="SamplePage5"/>
-                    <NavigationViewItem Content="Upload file" Icon="OpenLocal" ToolTipService.ToolTip="Upload file" Tag="SamplePage6"/>
-                </NavigationViewItem.MenuItems>
-            </NavigationViewItem>
+            <NavigationViewItem 
+                Content="Edit Simulation Options" 
+                Icon="Edit" 
+                ToolTipService.ToolTip="Document options" 
+                SelectsOnInvoked="False"
+             />
         </NavigationView.MenuItems>
-        
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <StackPanel Grid.Row="0" Orientation="Horizontal" Background="#CCD5F0">
 
-                <!--Toggle btn with a custom glyph-->
-                <ToggleButton x:Name="pencilBtn" IsChecked="True" Width="45" Height="45">
-                    <FontIcon Foreground="Black" Glyph="&#xED63;"/>
-                </ToggleButton>
-                <ToggleButton x:Name="brushBtn" Width="45" Height="45">
-                    <FontIcon Foreground="Black" Glyph="&#xE771;"/>
-                </ToggleButton>
+        <Frame x:Name="MainContentFrame" />
 
-                <ToggleButton x:Name="eraserBtn" Width="45" Height="45">
-                    <FontIcon Foreground="Black" Glyph="&#xE75C;"/>
-                </ToggleButton>
-            </StackPanel>
-        </Grid>
     </NavigationView>
 
 
