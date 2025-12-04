@@ -1,22 +1,47 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
+using System;
 
 namespace Morris.Models {
 
     public class StarSystem {
-        private Planet[] planets;
+        private IList<Planet> planets;
         private Star mainStar;
+        private int planetCount;
 
         public StarSystem() {
             this.mainStar = new Star();
-            this.planets = new Planet[9];
+            this.planets = new List<Planet>();
+            this.planetCount = planets.Count;
         }
 
-        private async void SaveSimToJSON() {
-            string fileName = "StarSystem.json";
+        //Properties that will go in JSON
+        public Star MainStar {
+            get { return this.mainStar; }
+            set { this.mainStar = value; }
+        }
+        public int PlanetCount {
+            get { return this.planetCount;}
+            set { planetCount = value; }
+        }
+        public IList<Planet> Planets {
+            get { return this.planets; }
+            set { this.planets = value; }
+        }
+
+
+        private async void WriteSimToJSON() {
+            string fileName = "Data/StarSystem.json";
             await using FileStream createStream = File.Create(fileName);
-            await JsonSerializer.SerializeAsync(createStream, this);
+            var options = new JsonSerializerOptions { WriteIndented = true };
+            await JsonSerializer.SerializeAsync(createStream, this, options);
+        }
+
+        private async void ReadSimFromJSON() {
+            string fileName = "Data/StarSystem.json";
+            using FileStream openStream = File.OpenRead(fileName);
+            StarSystem readInfo = await JsonSerializer.DeserializeAsync<StarSystem>(openStream);
         }
     }
 }

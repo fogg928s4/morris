@@ -30,7 +30,7 @@ namespace Morris
             Title = "Morris";
         }
 
-        private StarSystem currentSymulation = new StarSystem();
+        private StarSystem currentSimulation = new StarSystem();
 
 
     }

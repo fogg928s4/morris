@@ -6,6 +6,7 @@ using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using System;
+using System.Text.Json;
 //using System.Drawing;
 using System.Collections.Generic;
 using System.IO;
@@ -29,7 +30,7 @@ namespace Morris.Pages
             this.InitializeComponent();
         }
         private void StarColorPicker_ColorChanged(ColorPicker sender, ColorChangedEventArgs args) {
-
+            starColor.Background = new SolidColorBrush(args.NewColor);
         }
         private void CreateStarBtn_Click(object sender, RoutedEventArgs args) {
 

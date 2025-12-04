@@ -10,23 +10,10 @@
     >
 
     <Grid>
-       <Grid.RowDefinitions>
-           <RowDefinition Height="Auto"/>
-           <RowDefinition Height="*"/>
-       </Grid.RowDefinitions>
-       <StackPanel Grid.Row="0" Orientation="Horizontal" Background="#CCD5F0">
-
-           <!--Toggle btn with a custom glyph-->
-           <ToggleButton x:Name="pencilBtn" IsChecked="True" Width="45" Height="45">
-               <FontIcon Foreground="Green" Glyph="&#xED63;"/>
-           </ToggleButton>
-           <ToggleButton x:Name="brushBtn" Width="45" Height="45">
-               <FontIcon Foreground="Green" Glyph="&#xE771;"/>
-           </ToggleButton>
-
-           <ToggleButton x:Name="eraserBtn" Width="45" Height="45">
-               <FontIcon Foreground="Green" Glyph="&#xE75C;"/>
-           </ToggleButton>
-       </StackPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Canvas x:Name="canvas" Grid.Row="1" Background="White" />
     </Grid>
 </Page>

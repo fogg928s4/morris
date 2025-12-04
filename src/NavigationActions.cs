@@ -20,16 +20,16 @@ namespace Morris {
              //         .FirstOrDefault(x => x.Content.Equals(args.InvokedItem));
             switch (invokedItem) {
                 case "Add Star":
-                    MainContentFrame.Navigate(typeof(Pages.CreateStarPage));
+                    MainContentFrame.Navigate(typeof(Pages.CreateStarPage), currentSimulation);
                     break;
                 case "Add Planet":
-                    MainContentFrame.Navigate(typeof (Pages.CreatePlanetPage));
+                    MainContentFrame.Navigate(typeof (Pages.CreatePlanetPage), currentSimulation);
                     break;
                 case "View Simulation":
-                    MainContentFrame.Navigate(typeof(Pages.SimulationPage));
+                    MainContentFrame.Navigate(typeof(Pages.SimulationPage), currentSimulation);
                     break;
                 case "Settings":
-                    MainContentFrame.Navigate(typeof(Pages.SettingsPage));
+                    MainContentFrame.Navigate(typeof(Pages.SettingsPage), currentSimulation);
                     break;
             }
         }

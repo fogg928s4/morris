@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Morris.Models {
-    internal class Star : CelestialBody {
+    public class Star : CelestialBody {
 
         // Constructors
         // Constructors

@@ -21,16 +21,18 @@ using Morris;
 
 namespace Morris.Pages
 {
-
+    
     public sealed partial class CreatePlanetPage : Page
     {
+
+
         //initializes main window
         public CreatePlanetPage() {
             this.InitializeComponent();
         }
 
         private void PlanetColorPicker_ColorChanged(ColorPicker sender, ColorChangedEventArgs args) {
-
+            planetColor.Background = new SolidColorBrush(args.NewColor);
         }
         private void CreatePlanetBtn_Click(object sender, RoutedEventArgs args) {
 
