@@ -2,7 +2,7 @@
     "title": "Dame ahora tu mejor pose",
     "MainStar": {
         "Name": "Sun",
-        "Mass": 1234.21
+        "Mass": 1234.21,
         "HexColor": "b4dd1e"
     },
     "Planets": [
