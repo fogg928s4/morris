@@ -26,7 +26,7 @@ namespace Morris {
                     MainContentFrame.Navigate(typeof (Pages.CreatePlanetPage), currentSimulation.Planets);
                     break;
                 case "View Simulation":
-                    MainContentFrame.Navigate(typeof(Pages.SimulationPage), currentSimulation);
+                    MainContentFrame.Navigate(typeof(Pages.SimulationPage));
                     break;
                 case "Settings":
                     MainContentFrame.Navigate(typeof(Pages.SettingsPage), currentSimulation);

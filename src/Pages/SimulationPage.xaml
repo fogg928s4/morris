@@ -14,6 +14,10 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Canvas x:Name="canvas" Grid.Row="1" Background="White" />
+        <Canvas x:Name="canvas" Grid.Row="1" Background="DarkSlateBlue" Height="Auto" Width="Auto" Loaded="Canvas_FillCanvas">
+            <Ellipse Width="100" Height="60" Fill="SkyBlue"
+                     Stroke="DarkBlue" StrokeThickness="2"
+                     Canvas.Left="50" Canvas.Top="40"/>
+        </Canvas>
     </Grid>
 </Page>
