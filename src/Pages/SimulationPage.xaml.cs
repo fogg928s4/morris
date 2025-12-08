@@ -30,8 +30,8 @@ namespace Morris.Pages {
         public SimulationPage() {
             this.InitializeComponent();
             planetEllipse = new Ellipse {
-                Width = 40,
-                Height = 40,
+                Width = 20,
+                Height = 20,
                 Stroke = new SolidColorBrush(Colors.Pink),
                 StrokeThickness = 1,
                 Fill = new SolidColorBrush(Colors.SkyBlue)
@@ -43,7 +43,9 @@ namespace Morris.Pages {
 
         public void Canvas_FillCanvas(object sender, RoutedEventArgs args) {
             DrawOrbit();
-            planetPosSlider.Maximum = orbitEllipse.ActualWidth;
+            planetPosSlider.Maximum = orbitEllipse.ActualWidth/2;
+            planetPosSlider.Minimum = -orbitEllipse.ActualWidth/2;
+            planetPosSlider.Value = planetPosSlider.Minimum;
             focalDistance = OrbitCalculus.CalculateFocus(orbitEllipse.ActualWidth, orbitEllipse.ActualHeight);
 
             DrawStar();
@@ -56,19 +58,13 @@ namespace Morris.Pages {
  
 
             double left = (canvas.ActualWidth - orbitEllipse.ActualWidth - planetEllipse.ActualWidth) / 2;
-            double center = (orbitEllipse.ActualWidth)/ 2;
-            double top = (canvas.ActualHeight) / 2;
-            double y;
-            if(x < center ) {
-                y = OrbitCalculus.CalcVerticalPos(center - (left + x), a);
-            }
-            else {
-                y = OrbitCalculus.CalcVerticalPos((left + x) - center, a);
-            }
+            double center = (canvas.ActualWidth)/ 2;
+            double top = (canvas.ActualHeight - planetEllipse.ActualHeight) / 2;
+            double y = OrbitCalculus.CalcVerticalPos(x, a);
 
             // planetPosSliderLabel.Text = $"y= {y} settop = {top-y} setleft = {left+x}";
-            Canvas.SetLeft(planetEllipse, left + x);
-            Canvas.SetTop(planetEllipse, top-y + (planetEllipse.ActualHeight/2));
+            Canvas.SetLeft(planetEllipse, left + (orbitEllipse.ActualWidth / 2 + x)); // move horizontally
+            Canvas.SetTop(planetEllipse, top-y);
         }
 
         private Ellipse orbitEllipse;
@@ -96,8 +92,8 @@ namespace Morris.Pages {
         //draws star focus of ellipse
         public void DrawStar() {
             starEllipse = new Ellipse {
-                Width = 30,
-                Height = 30,
+                Width = 50,
+                Height = 50,
                 Stroke = new SolidColorBrush(Colors.Red),
                 StrokeThickness = 2,
                 Fill = new SolidColorBrush(Colors.Yellow)
@@ -118,7 +114,7 @@ namespace Morris.Pages {
             double top = (canvas.ActualHeight - planetEllipse.ActualHeight) / 2;
             canvas.Children.Add(planetEllipse);
             Canvas.SetLeft(planetEllipse, left);
-            Canvas.SetTop(planetEllipse, top + planetPosSlider.Value);
+            Canvas.SetTop(planetEllipse, top);
         }
     }
 }

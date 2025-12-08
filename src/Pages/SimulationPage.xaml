@@ -16,7 +16,7 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Orientation="Horizontal">
             <TextBlock Grid.Row="0" Grid.Column="0" x:Name="planetPosSliderLabel" Text="Change the planet position" Margin="10, 5, 10, 0"/>
-            <Slider Grid.Row="0" Grid.Column="1" x:Name="planetPosSlider" Minimum="0" ValueChanged="MovePlanetPos" Width="400"/>
+            <Slider Grid.Row="0" Grid.Column="1" x:Name="planetPosSlider" ValueChanged="MovePlanetPos" Width="400"/>
         </StackPanel>
         <Canvas x:Name="canvas" Grid.Row="1" Background="#10134A" Height="Auto" Width="Auto" Loaded="Canvas_FillCanvas"/>
     </Grid>
