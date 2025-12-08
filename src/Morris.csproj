@@ -12,7 +12,13 @@
     <UseWinUI>true</UseWinUI>
     <EnableMsixTooling>true</EnableMsixTooling>
     <ApplicationIcon>Assets\icon.ico</ApplicationIcon>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
+    <SignAssembly>False</SignAssembly>
+    <UseWPF>False</UseWPF>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Assets\StoreLogo.scale-400.png" />
+  </ItemGroup>
 
   <ItemGroup>
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -20,7 +26,6 @@
     <Content Include="Assets\Square150x150Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
-    <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
   </ItemGroup>
 
@@ -45,6 +50,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Pages\HomePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Pages\SettingsPage.xaml">
       <SubType>Designer</SubType>
     </Page>

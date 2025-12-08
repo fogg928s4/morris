@@ -18,6 +18,18 @@
             <TextBlock Grid.Row="0" Grid.Column="0" x:Name="planetPosSliderLabel" Text="Change the planet position" Margin="10, 5, 10, 0"/>
             <Slider Grid.Row="0" Grid.Column="1" x:Name="planetPosSlider" ValueChanged="MovePlanetPos" Width="400"/>
         </StackPanel>
-        <Canvas x:Name="canvas" Grid.Row="1" Background="#10134A" Height="Auto" Width="Auto" Loaded="Canvas_FillCanvas"/>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" >
+            <Border Grid.Row="1" Grid.Column="0" CornerRadius="4" Background="{StaticResource AccentTextFillColorTertiaryBrush}">
+                <TextBlock x:Name="labelVelocity" Text="Satellite Speed ="/>
+            </Border>
+            <TextBlock x:Name="velTxtBlock" Text="0.00 m/s"/>
+            <Border Grid.Row="1" Grid.Column="1"  CornerRadius="4" Background="{StaticResource AccentTextFillColorTertiaryBrush}">
+                <TextBlock x:Name="labelForce" Text="Force Between  ="/>
+            </Border>
+            <TextBlock x:Name="forceTxtBlock" Text="0.00 kN"/>
+        </StackPanel>
+        
+        <Canvas x:Name="canvas" Grid.Row="2" Background="#10134A" Height="Auto" Width="Auto" Loaded="Canvas_FillCanvas"/>
+
     </Grid>
 </Page>

@@ -5,7 +5,8 @@
   xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
-  IgnorableNamespaces="uap rescap">
+  xmlns:uap18="http://schemas.microsoft.com/appx/manifest/uap/windows10/18"
+  IgnorableNamespaces="uap rescap uap18">
 
   <Identity
     Name="503c5f94-43f5-48ca-a91c-a2ff0dd13be6"
@@ -16,7 +17,7 @@
 
   <Properties>
     <DisplayName>Morris</DisplayName>
-    <PublisherDisplayName>fogg928s4</PublisherDisplayName>
+    <PublisherDisplayName>Jose Melgares</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -32,13 +33,12 @@
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
-      EntryPoint="$targetentrypoint$">
+      EntryPoint="$targetentrypoint$" uap18:RuntimeBehavior="windowsApp">
       <uap:VisualElements
         DisplayName="Morris"
         Description="Morris is a WinUI base software for modeling planet speed and gravitational effects"
-        BackgroundColor="transparent"
         Square150x150Logo="Assets\Square150x150Logo.png"
-        Square44x44Logo="Assets\Square44x44Logo.png">
+        Square44x44Logo="Assets\Square44x44Logo.png" BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" />
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
         <uap:InitialRotationPreference>

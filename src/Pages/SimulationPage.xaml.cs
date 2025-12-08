@@ -36,7 +36,9 @@ namespace Morris.Pages {
                 StrokeThickness = 1,
                 Fill = new SolidColorBrush(Colors.SkyBlue)
             };
-
+            
+            planetCoords.x = 0; 
+            planetCoords.y = 0;
         }
 
 
@@ -51,6 +53,14 @@ namespace Morris.Pages {
             DrawStar();
             DrawPlanet();
         }
+        private Ellipse orbitEllipse;
+        private Ellipse starEllipse;
+        private Ellipse planetEllipse;
+        private double focalDistance;
+        public struct PlanetCoords {
+            public double x, y;
+        };
+        public PlanetCoords planetCoords = new PlanetCoords();
 
         public void MovePlanetPos(object sender, RoutedEventArgs args) {
             double x = planetPosSlider.Value;
@@ -65,12 +75,12 @@ namespace Morris.Pages {
             // planetPosSliderLabel.Text = $"y= {y} settop = {top-y} setleft = {left+x}";
             Canvas.SetLeft(planetEllipse, left + (orbitEllipse.ActualWidth / 2 + x)); // move horizontally
             Canvas.SetTop(planetEllipse, top-y);
+            //set to coordinates
+            planetCoords.x = x;
+            planetCoords.y = y;
         }
 
-        private Ellipse orbitEllipse;
-        private Ellipse starEllipse;
-        private Ellipse planetEllipse;
-        private double focalDistance;
+
 
         // Draws elliptical orbit
         public void DrawOrbit() {
