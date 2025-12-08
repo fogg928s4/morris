@@ -24,10 +24,14 @@ namespace Morris.Math {
             return System.Math.Sqrt(Squared(a) - Squared(b)); //c
         }
 
-        public static double CalcSqrDistanceToFocus(double x, double a, double c ) {
-            double temp = Squared(x/a);
+        public static double CalcVerticalPos(double x, double a) {
+            double temp = Squared(x / a);
             double b = CalculateHeight(a) / 2;
-            double y = System.Math.Sqrt(1 - temp) * Squared(b);
+            return System.Math.Sqrt((1 - temp) * Squared(b)) ;
+        }
+
+        public static double CalcSqrDistanceToFocus(double x, double a, double c ) {
+            double y = CalcVerticalPos(x, a);
             return Squared(c-y) + Squared(x); 
         }
 

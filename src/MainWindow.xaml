@@ -13,7 +13,7 @@
 
     <NavigationView x:Name="mainNavigation" 
                     Grid.Row="1" 
-                    Height="460"
+                    Height="Auto"
                     PaneDisplayMode="Left"
                     IsTabStop="False"
                     ItemInvoked="Navigate_Invoke">
