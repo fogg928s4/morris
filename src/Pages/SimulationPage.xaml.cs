@@ -23,8 +23,7 @@ using Microsoft.UI;
 using Python.Runtime;
 using Morris.Math;
 
-namespace Morris.Pages
-{
+namespace Morris.Pages {
 
     public sealed partial class SimulationPage : Page {
         //initializes main window
@@ -32,39 +31,70 @@ namespace Morris.Pages
             this.InitializeComponent();
         }
 
-        public void Canvas_FillCanvas(object sender, RoutedEventArgs args) { 
-            Ellipse testEllipse = new Ellipse {
+
+
+        public void Canvas_FillCanvas(object sender, RoutedEventArgs args) {
+            DrawOrbit();
+            focalDistance = OrbitCalculus.CalculateFocus(orbitEllipse.ActualWidth, orbitEllipse.ActualHeight);
+            DrawStar();
+            DrawPlanet();
+        }
+
+        private Ellipse orbitEllipse;
+        private Ellipse starEllipse;
+        private Ellipse planetEllipse;
+        private double focalDistance;
+
+        // Draws elliptical orbit
+        public void DrawOrbit() {
+            orbitEllipse = new Ellipse {
+                Width = canvas.ActualWidth - 100,
+                Stroke = new SolidColorBrush(Colors.Black),
+                StrokeThickness = 1,
+                Fill = null
+            };
+            orbitEllipse.Height = OrbitCalculus.CalculateHeight(orbitEllipse.ActualWidth / 2);
+            // center it
+            int left = (int)((canvas.ActualWidth - orbitEllipse.ActualWidth) / 2);
+            int top = (int)((canvas.ActualHeight - orbitEllipse.ActualHeight) / 2);
+            canvas.Children.Add(orbitEllipse);
+            Canvas.SetLeft(orbitEllipse, left);
+            Canvas.SetTop(orbitEllipse, top);
+        }
+
+        //draws star in themiddle of canvas
+        public void DrawStar() {
+            starEllipse = new Ellipse {
                 Width = 30,
                 Height = 30,
                 Stroke = new SolidColorBrush(Colors.Red),
                 StrokeThickness = 2,
                 Fill = new SolidColorBrush(Colors.Yellow)
             };
-            int left = (int) ((canvas.ActualWidth - testEllipse.ActualWidth) / 2);
-            int top = (int)((canvas.ActualHeight - testEllipse.ActualHeight) / 2);
-            canvas.Children.Add(new TextBox { Text = $"Left: {left}, top: {top}"});
-            canvas.Children.Add(testEllipse);
-            Canvas.SetLeft(testEllipse, left);
-            Canvas.SetTop(testEllipse, top);
-            Canvas_AppendOrbit();
+
+            // centers it
+            double left = (canvas.ActualWidth/2) + focalDistance -starEllipse.Width;
+            double top = (double)((canvas.ActualHeight - starEllipse.ActualHeight) / 2);
+            canvas.Children.Add(new TextBox { Text = $"focal: {focalDistance}, width: {canvas.ActualWidth}" });
+            canvas.Children.Add(starEllipse);
+            Canvas.SetLeft(starEllipse, left);
+            Canvas.SetTop(starEllipse, top);
         }
 
-        public void Canvas_AppendOrbit() {
-            Ellipse testOrbit = new Ellipse {
-                Width = canvas.ActualWidth - 20,
-                Stroke = new SolidColorBrush(Colors.Black),
-                StrokeThickness = 2,
-                Fill = null
+        public void DrawPlanet() {
+            planetEllipse = new Ellipse {
+                Width = 40,
+                Height =40,
+                Stroke = new SolidColorBrush(Colors.Pink),
+                StrokeThickness = 1,
+                Fill = new SolidColorBrush(Colors.SkyBlue)
             };
-            testOrbit.Height = OrbitCalculus.CalculateHeight(canvas.ActualHeight);
-            int left = (int)((canvas.ActualWidth - testOrbit.ActualWidth) / 2);
-            int top = (int)((canvas.ActualHeight - testOrbit.ActualHeight) / 2);
-            canvas.Children.Add(testOrbit);
-            Canvas.SetLeft(testOrbit, left);
-            Canvas.SetTop(testOrbit, top);
+            // center it
+            double left = (canvas.ActualWidth - orbitEllipse.ActualWidth - planetEllipse.ActualWidth) / 2;
+            double top = (canvas.ActualHeight - planetEllipse.ActualHeight) / 2;
+            canvas.Children.Add(planetEllipse);
+            Canvas.SetLeft(planetEllipse, left);
+            Canvas.SetTop(planetEllipse, top);
         }
-
-
-
     }
 }

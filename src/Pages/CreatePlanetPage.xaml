@@ -19,7 +19,7 @@
         FontWeight="Bold"
         TextAlignment="Left"
         HorizontalAlignment="Left"
-        Margin="0,15,0,15"/>
+        Margin="15"/>
         <StackPanel Grid.Row="1" Grid.Column="0" Padding="20" Spacing="10" HorizontalAlignment="Center">
             <!--Name-->
             <TextBlock x:Name="labelPlanetName" Text="Name of the Planet" FontSize="16" FontWeight="Normal" Margin="10"/>
