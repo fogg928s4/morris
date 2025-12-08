@@ -10,12 +10,25 @@ using System.Threading.Tasks;
 namespace Morris.Math {
     public class OrbitCalculus {
         public static double CalculateHeight(double a) {
-            const double e = 0.0167; // earth eccentricity
+            const double e = 0.75; //  eccentricity
             double c = e * a;
-            return System.Math.Sqrt(Squared(a) - Squared(c));
+            return 2*System.Math.Sqrt(Squared(a) - Squared(c));
         }
         private static double Squared(double n) {
             return n * n;
+        }
+
+        public static double CalculateFocus(double width, double height) {
+            double a = width / 2;
+            double b = height / 2;
+            return System.Math.Sqrt(Squared(a) - Squared(b)); //c
+        }
+
+        public static double CalcSqrDistanceToFocus(double x, double a, double c ) {
+            double temp = Squared(x/a);
+            double b = CalculateHeight(a) / 2;
+            double y = System.Math.Sqrt(1 - temp) * Squared(b);
+            return Squared(c-y) + Squared(x); 
         }
 
         // deprecated
@@ -23,7 +36,7 @@ namespace Morris.Math {
             double ellipseHeight;
             PythonEngine.Initialize();
             using (Py.GIL()) {
-                string baseDir = System.IO.Path.Combine(Directory.GetCurrentDirectory(), "..", "Math");
+                string baseDir = Path.Combine(Directory.GetCurrentDirectory(), "..", "Math");
                 dynamic sys = Py.Import("sys");
                 sys.path.append(baseDir);
                 dynamic ellipseCalc = Py.Import("elliptipcal_calculus");
