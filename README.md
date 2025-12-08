@@ -11,9 +11,11 @@ The project is made using the Windows UI Framework for the development of the ap
 
 To edit the project, the `.sln` and `.csproj` files can be found inside the `src` directory of this repository. Once there, you can edit any individual pages or views from the `src/Pages` directory. All of these are under the root namespace _Morris_.
 
+You can find most of the simulation data and calculations inside the `src/Pages/SimulationPage.xaml.cs` file, as well as the math being inside the `src/Math` directory.
+
 ## Extra information
 
-The project's name is not that of a famous scientist or formula, but that of the picture below:
+The project's name is not that of a famous scientist or formula, but that of my dog, Morris:
 
 <div align="center">
 
