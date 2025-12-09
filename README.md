@@ -17,6 +17,11 @@ To edit the project, the `.sln` and `.csproj` files can be found inside the `src
 
 You can find most of the simulation data and calculations inside the `src/Pages/SimulationPage.xaml.cs` file, as well as the math being inside the `src/Math` directory. 
 
+### Diagram
+
+Here you can find a simple diagram on how the app works and runs
+![State Diagram](/img/diagram.png)
+
 ## Extra information
 
 The project's name is not that of a famous scientist or formula, but that of my dog, Morris:
