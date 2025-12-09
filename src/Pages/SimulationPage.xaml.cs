@@ -57,6 +57,7 @@ namespace Morris.Pages {
         private Ellipse starEllipse;
         private Ellipse planetEllipse;
         private double focalDistance;
+        private bool REACHED_MAX;
         public struct PlanetCoords {
             public double x, y;
         };
@@ -65,16 +66,19 @@ namespace Morris.Pages {
         public void MovePlanetPos(object sender, RoutedEventArgs args) {
             double x = planetPosSlider.Value;
             double a = orbitEllipse.ActualWidth / 2;
- 
-
-            double left = (canvas.ActualWidth - orbitEllipse.ActualWidth - planetEllipse.ActualWidth) / 2;
-            double center = (canvas.ActualWidth)/ 2;
-            double top = (canvas.ActualHeight - planetEllipse.ActualHeight) / 2;
             double y = OrbitCalculus.CalcVerticalPos(x, a);
-
+            double left = (canvas.ActualWidth - orbitEllipse.ActualWidth - planetEllipse.ActualWidth) / 2;
+            double top = (canvas.ActualHeight - planetEllipse.ActualHeight) / 2;
+            
+            if(x == planetPosSlider.Maximum){
+                REACHED_MAX = true;
+            }
+            else if (x == planetPosSlider.Minimum) {
+                REACHED_MAX = false;
+            }
             // planetPosSliderLabel.Text = $"y= {y} settop = {top-y} setleft = {left+x}";
             Canvas.SetLeft(planetEllipse, left + (orbitEllipse.ActualWidth / 2 + x)); // move horizontally
-            Canvas.SetTop(planetEllipse, top-y);
+            Canvas.SetTop(planetEllipse, REACHED_MAX ? (top-y) : (top+y));
             //set to coordinates
             planetCoords.x = x;
             planetCoords.y = y;
