@@ -56,5 +56,6 @@ namespace Morris
             await using Stream openStream = File.OpenRead(fullPath);
             currentSimulation = await JsonSerializer.DeserializeAsync<StarSystem>(openStream);
         }
+
     }
 }
