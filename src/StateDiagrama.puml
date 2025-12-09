@@ -1,0 +1,23 @@
+@startuml
+[*] --> LoadData
+
+state LoadData {
+  [*] --> ReadJSON
+  ReadJSON --> Ready : Data loaded
+}
+
+Ready --> EditSettings : User chooses to edit
+Ready --> ViewSimulation : User chooses to view
+
+state EditSettings {
+  [*] --> Editing
+  Editing --> Ready : Done editing
+}
+
+state ViewSimulation {
+  [*] --> SimulationRunning
+  SimulationRunning --> SimulationRunning : Move planet/object
+  SimulationRunning --> [*] : Close app
+}
+
+@enduml
