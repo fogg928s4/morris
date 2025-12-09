@@ -47,7 +47,32 @@
              />
         </NavigationView.MenuItems>
 
-        <Frame x:Name="MainContentFrame" />
+        <Frame x:Name="MainContentFrame">
+            <StackPanel Orientation="Vertical" Margin="15">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Morris"
+                        FontSize="40"
+                        FontWeight="Bold"
+                        TextAlignment="Left"
+                        HorizontalAlignment="Left"
+                        Margin="0, 0, 20, 15"
+                        />
+                    <Image Source="/Assets/BaseIcon.png" Width="50" Height="50"/>
+                </StackPanel>
+                <TextBlock Text="This is a software designed for the visualization of the grational and speed effects of planets in fictional or real systems depending on their mass. It is a free use software created as a college project." TextWrapping="Wrap" />
+                <HyperlinkButton Margin="0,40,0,0"  NavigateUri="https://github.com/fogg928s4/morris">
+
+                    <StackPanel>
+                        <TextBlock FontSize="16" Text="Checkout the Repository" FontWeight="Bold"/>
+                        <Image Source="/Assets/github-mark-white.png" Height="50" Width="50" Margin="15"/>
+                    </StackPanel>
+                </HyperlinkButton>
+                <Button x:Name="goForItBtn" Click="goForItBtn_Click" Content="Go For It!" 
+                        Background="{ThemeResource AccentTextFillColorTertiaryBrush}"
+                        Foreground="{ThemeResource TextOnAccentFillColorPrimaryBrush}"
+                        Margin="0,20,0,20"/>
+            </StackPanel>
+        </Frame>
 
     </NavigationView>
 

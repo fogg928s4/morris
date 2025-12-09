@@ -20,13 +20,14 @@
         </StackPanel>
         <StackPanel Grid.Row="1" Orientation="Horizontal" >
             <Border Grid.Row="1" Grid.Column="0" CornerRadius="4" Background="{StaticResource AccentTextFillColorTertiaryBrush}">
-                <TextBlock x:Name="labelVelocity" Text="Satellite Speed ="/>
+                <TextBlock x:Name="velTxtBlock" Text="0.00 m/s"/>
             </Border>
-            <TextBlock x:Name="velTxtBlock" Text="0.00 m/s"/>
+            <TextBlock x:Name="labelVelocity" Text="Satellite Speed ="/>
             <Border Grid.Row="1" Grid.Column="1"  CornerRadius="4" Background="{StaticResource AccentTextFillColorTertiaryBrush}">
-                <TextBlock x:Name="labelForce" Text="Force Between  ="/>
+                <TextBlock x:Name="forceTxtBlock" Text="0.00 kN"/>
             </Border>
-            <TextBlock x:Name="forceTxtBlock" Text="0.00 kN"/>
+           
+            <TextBlock x:Name="labelForce" Text="Force Between  ="/>
         </StackPanel>
         
         <Canvas x:Name="canvas" Grid.Row="2" Background="#10134A" Height="Auto" Width="Auto" Loaded="Canvas_FillCanvas"/>
