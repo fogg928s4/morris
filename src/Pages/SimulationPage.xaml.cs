@@ -22,26 +22,35 @@ using System.Drawing;
 using Microsoft.UI;
 using Python.Runtime;
 using Morris.Math;
+using Morris.Models;
+using System.Windows.Media;
 
 namespace Morris.Pages {
 
     public sealed partial class SimulationPage : Page {
         //initializes main window
         public SimulationPage() {
-            this.InitializeComponent();
-            planetEllipse = new Ellipse {
-                Width = 20,
-                Height = 20,
-                Stroke = new SolidColorBrush(Colors.Pink),
-                StrokeThickness = 1,
-                Fill = new SolidColorBrush(Colors.SkyBlue)
-            };
-            
-            planetCoords.x = 0; 
-            planetCoords.y = 0;
+            try {
+                this.InitializeComponent();
+                FetchJSONSimData("\\StarSystem.json");
+                planetEllipse = new Ellipse {
+                    Width = 20,
+                    Height = 20,
+                    Stroke = new Microsoft.UI.Xaml.Media.SolidColorBrush(Microsoft.UI.Colors.Pink),
+                    StrokeThickness = 1,
+                    Fill = new Microsoft.UI.Xaml.Media.SolidColorBrush(Microsoft.UI.Colors.SkyBlue)
+                };
+                planetCoords.x = 0;
+                planetCoords.y = 0;
+            }
+            catch (Exception ex) {
+                if (ex is FileNotFoundException) {
+                    Console.WriteLine(ex.Message);
+                    throw new FileNotFoundException();
+                }
+            }
+
         }
-
-
 
         public void Canvas_FillCanvas(object sender, RoutedEventArgs args) {
             DrawOrbit();
@@ -53,6 +62,8 @@ namespace Morris.Pages {
             DrawStar();
             DrawPlanet();
         }
+
+        private StarSystem simData;
         private Ellipse orbitEllipse;
         private Ellipse starEllipse;
         private Ellipse planetEllipse;
@@ -84,13 +95,11 @@ namespace Morris.Pages {
             planetCoords.y = y;
         }
 
-
-
         // Draws elliptical orbit
         public void DrawOrbit() {
             orbitEllipse = new Ellipse {
                 Width = canvas.ActualWidth - 100,
-                Stroke = new SolidColorBrush(Colors.White),
+                Stroke = new Microsoft.UI.Xaml.Media.SolidColorBrush(Microsoft.UI.Colors.White),
                 StrokeThickness = 1,
                 Fill = null
             };
@@ -105,12 +114,13 @@ namespace Morris.Pages {
 
         //draws star focus of ellipse
         public void DrawStar() {
+            BrushConverter bc = new BrushConverter();
             starEllipse = new Ellipse {
                 Width = 50,
                 Height = 50,
-                Stroke = new SolidColorBrush(Colors.Red),
+                Stroke = new Microsoft.UI.Xaml.Media.SolidColorBrush(Microsoft.UI.Colors.Black),
                 StrokeThickness = 2,
-                Fill = new SolidColorBrush(Colors.Yellow)
+                Fill = (Microsoft.UI.Xaml.Media.Brush)bc.ConvertFromString(simData.MainStar.HexColor)
             };
             // centers it on focal point
             double left = (canvas.ActualWidth/2) + focalDistance -starEllipse.Width;
@@ -122,7 +132,8 @@ namespace Morris.Pages {
         }
 
         // Dynamic movement
-        public void DrawPlanet() { 
+        public void DrawPlanet() {
+
             // center it
             double left = (canvas.ActualWidth - orbitEllipse.ActualWidth - planetEllipse.ActualWidth) / 2;
             double top = (canvas.ActualHeight - planetEllipse.ActualHeight) / 2;

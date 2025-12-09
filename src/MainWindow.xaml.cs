@@ -27,35 +27,15 @@ namespace Morris
     {
         //initializes main window
         public MainWindow() {
-            try {
-                this.InitializeComponent();
-                Title = "Morris";
-                FetchJSONSimData("\\StarSystem.json");
-            }
-            catch (Exception ex) {
-                if(ex is FileNotFoundException) {
-                    Console.WriteLine(ex.Message);
-                    throw new FileNotFoundException(Title);
-                }
-                this.Close();
-            }
+            this.InitializeComponent();
+            Title = "Morris";
         }
 
-        public StarSystem currentSimulation;
+
+        public StarSystem currentSimulation = new StarSystem();
 
         // fetch data from JSON file
-        public async void FetchJSONSimData(string fileName) {
-            string fileDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\SimData" ;
-            string fullPath = fileDirectory + fileName;
 
-            if (!File.Exists(fullPath)) {
-                Directory.CreateDirectory(fileDirectory);
-                File.Create(fullPath);
-
-            }
-            await using Stream openStream = File.OpenRead(fullPath);
-            currentSimulation = await JsonSerializer.DeserializeAsync<StarSystem>(openStream);
-        }
 
     }
 }

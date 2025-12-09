@@ -1,6 +1,7 @@
 ﻿using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Shapes;
+using Morris.Pages;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -21,26 +22,25 @@ namespace Morris {
              //         .FirstOrDefault(x => x.Content.Equals(args.InvokedItem));
             switch (invokedItem) {
                 case "Add Star":
-                    MainContentFrame.Navigate(typeof(Pages.CreateStarPage), currentSimulation.MainStar);
+                    MainContentFrame.Navigate(typeof(CreateStarPage), currentSimulation.MainStar);
                     break;
                 case "Add Planet":
-                    MainContentFrame.Navigate(typeof (Pages.CreatePlanetPage), currentSimulation.Planets);
+                    MainContentFrame.Navigate(typeof (CreatePlanetPage), currentSimulation.Planets);
                     break;
-                case "View Simulation":
-                    MainContentFrame.Navigate(typeof(Pages.SimulationPage));
+                case "View Simulation": // Main simulation page
+                    MainContentFrame.Navigate(typeof(SimulationPage), currentSimulation);
                     break;
                 case "Settings":
-                    MainContentFrame.Navigate(typeof(Pages.SettingsPage), currentSimulation);
+                    MainContentFrame.Navigate(typeof(SettingsPage), currentSimulation);
                     break;
                 default:
-                    MainContentFrame.Navigate(typeof(Pages.HomePage));
+                    MainContentFrame.Navigate(typeof(HomePage));
                     break;
             }
         }
 
         private void goForItBtn_Click(object sender, RoutedEventArgs args ) {
-            MainContentFrame.Navigate(typeof(Pages.SimulationPage));
-
+            MainContentFrame.Navigate(typeof(SimulationPage), currentSimulation);
         }
     }
 }

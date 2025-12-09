@@ -19,6 +19,7 @@ namespace Morris.Models {
         }
 
         //Properties that will go in JSON
+        public String title { get; set; }
         public Star MainStar {
             get { return this.mainStar; }
             set { this.mainStar = value; }
