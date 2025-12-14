@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace Morris.Math {
     public class OrbitCalculus {
+        private static double e = 0.75; //  eccentricity
         public static double CalculateHeight(double a) {
-            const double e = 0.75; //  eccentricity
             double c = e * a;
             return 2*System.Math.Sqrt(Squared(a) - Squared(c));
         }
-        private static double Squared(double n) {
+        public static double Squared(double n) {
             return n * n;
         }
 
@@ -30,9 +30,10 @@ namespace Morris.Math {
             return System.Math.Sqrt((1 - temp) * Squared(b)) ;
         }
 
-        public static double CalcSqrDistanceToFocus(double x, double a, double c ) {
+        public static double CalcSqrDistanceToFocus(double x, double a) {
+            double c = e * a;
             double y = CalcVerticalPos(x, a);
-            return Squared(c-y) + Squared(x); 
+            return Squared(x-c) + Squared(y); 
         }
 
         // deprecated

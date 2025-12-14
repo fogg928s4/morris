@@ -2,24 +2,20 @@
     "title": "Dame ahora tu mejor pose",
     "MainStar": {
         "Name": "Sun",
-        "Mass": 1234.21,
-        "HexColor": "b4dd1e"
+        "Mass": 30000.26
     },
     "Planets": [
         {
-            "Name": "mercury",
-            "Mass": 1,
-            "HexColor": "ffffff"
+            "Name": "Dagobah",
+            "Mass": 1
         },
         {
-            "Name": "venus",
-            "Mass": 2,
-            "HexColor": "84122e"
+            "Name": "Kamino",
+            "Mass": 2
         },
         {
-            "Name": "ceres",
-            "Mass": 6,
-            "HexColor": "f3d2e1"
+            "Name": "Nmixx",
+            "Mass": 6
         }
     ],
     "PlanetCount": 1

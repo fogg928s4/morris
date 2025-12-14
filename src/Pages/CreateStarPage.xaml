@@ -53,6 +53,8 @@
                     Foreground="{ThemeResource TextOnAccentFillColorPrimaryBrush}"
                     HorizontalAlignment="Right" 
                     Click="CreateStarBtn_Click"/>
+
+            <!-- TextBlock x:Name="test" Foreground="White"></TextBlock-->
         </StackPanel>
 
         

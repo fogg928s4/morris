@@ -5,13 +5,14 @@
 * </summary>
 */
 using System;
+using Windows.UI;
 
 namespace Morris.Models {
     public abstract class CelestialBody {
         
         protected String name;
         protected Double mass; // mass in Earth masses
-        protected String hexColor = "000000";
+        protected Color fillColor;
 
         // Properties
         public string Name {
@@ -21,10 +22,6 @@ namespace Morris.Models {
         public double Mass {
             get { return mass; }
             set { mass = value; }
-        }
-        public String HexColor { 
-            get { return hexColor; } 
-            set { hexColor = value; } 
         }
     }
 }

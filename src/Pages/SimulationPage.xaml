@@ -31,7 +31,11 @@
                 <Border CornerRadius="4" Padding="5"  Margin="5,0,5,0"  Background="{StaticResource AccentTextFillColorTertiaryBrush}">
                     <TextBlock x:Name="forceTxtBlock" Foreground="{StaticResource TextOnAccentFillColorPrimaryBrush}" Text="0.00 kN"/>
                 </Border>
-
+            <!--LABELS FOR DISTANCE-->
+                <TextBlock x:Name="labelDistance" Text="Distance Between = "  Margin="5,0,5,0" />
+                <Border CornerRadius="4" Padding="5"  Margin="5,0,5,0"  Background="{StaticResource AccentTextFillColorTertiaryBrush}">
+                    <TextBlock x:Name="distTxtBlock" Foreground="{StaticResource TextOnAccentFillColorPrimaryBrush}" Text="0.00 Mkm"/>
+                </Border>
             </StackPanel>
         </StackPanel>
         
