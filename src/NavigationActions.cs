@@ -33,9 +33,6 @@ namespace Morris {
                 case "Settings":
                     MainContentFrame.Navigate(typeof(SettingsPage), currentSimulation);
                     break;
-                default:
-                    MainContentFrame.Navigate(typeof(HomePage));
-                    break;
             }
         }
 
