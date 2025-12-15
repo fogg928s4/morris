@@ -71,7 +71,7 @@ namespace Morris.Pages {
         private Ellipse starEllipse;
         private Ellipse planetEllipse;
         private double focalDistance;
-        private bool REACHED_MAX;
+        private bool REACHED_MAX = true;
         public struct PlanetCoords {
             public double x, y;
         };
@@ -148,6 +148,13 @@ namespace Morris.Pages {
 
         public void SetInitialValues() {
 
+        }
+
+        public bool isPlayingAnimation = false;
+        private void playBtn_Click(object sender, RoutedEventArgs e) {
+            isPlayingAnimation = !isPlayingAnimation;
+            playBtnIcon.Glyph = isPlayingAnimation ? "&#xE769;" : "&#xE768;"; // pause: play
+            PlayAnimation();
         }
     }
 }

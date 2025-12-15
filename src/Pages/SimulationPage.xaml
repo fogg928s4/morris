@@ -19,6 +19,9 @@
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <TextBlock x:Name="planetPosSliderLabel" Text="Change the planet position" Margin="10, 5, 10, 0"/>
                 <Slider x:Name="planetPosSlider" ValueChanged="MovePlanetPos" Width="400"/>
+                <Button x:Name="playBtn" Click="playBtn_Click" Background="{StaticResource AccentTextFillColorDisabledBrush}">
+                    <FontIcon x:Name="playBtnIcon" Glyph="&#xE768;"/>
+                </Button>
             </StackPanel>
             <!--LABELS FOR SPEED-->
             <StackPanel Margin="10, 5,10,0"  Orientation="Horizontal" >

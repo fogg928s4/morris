@@ -6,8 +6,15 @@
 </div>
 A software designed for the visualization of the grational and speed effects of planets in fictional or real systems depending on their mass. It is a free use software created as a college project.
 
-In synsthesis, it is a star system simulator based on several mathematical principles for the calculation of speed in the planets elliptical orbits based on their respective masses.
+In synsthesis, it is a star system simulator based on several mathematical principles for the calculation of speed in the planets elliptical orbits based on their respective masses. 
 
+Here is a quick screenshot of the simulation screen itself
+
+<div align="center">
+
+![Screenshot of simualtor](./img/screenshot.png)
+
+</div>
 
 ## Development
 
@@ -20,7 +27,12 @@ You can find most of the simulation data and calculations inside the `src/Pages/
 ### Diagram
 
 Here you can find a simple diagram on how the app works and runs
+<div align="center">
+
 ![State Diagram](/img/diagram.png)
+
+</div>
+
 
 ## Extra information
 

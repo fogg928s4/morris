@@ -7,10 +7,12 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Morris.Pages {
-    public partial class SimulationPage : Page {
+    public sealed partial class SimulationPage : Page {
         public async void FetchJSONSimData(string fileName) {
             string fileDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\SimData";
             string fullPath = fileDirectory + fileName;
@@ -36,6 +38,19 @@ namespace Morris.Pages {
             // force
             double force = DynamicCalculus.CalculateForce(distPlanetStar, simData.MainStar.Mass, simData.Planets[0].Mass);
             forceTxtBlock.Text = $"{force.ToString("0.##")} EN";
+        }
+
+
+        public void PlayAnimation() {
+            while (isPlayingAnimation) {
+                if(REACHED_MAX) {
+                    planetPosSlider.Value -= 1;
+                }
+                else {
+                    planetPosSlider.Value += 1;
+                }
+            }
+            Thread.Sleep(500);
         }
     }
 }

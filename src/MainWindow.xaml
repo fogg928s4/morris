@@ -60,7 +60,7 @@
                     <Image Source="/Assets/BaseIcon.png" Width="50" Height="50"/>
                 </StackPanel>
                 <TextBlock Text="This is a software designed for the visualization of the grational and speed effects of planets in fictional or real systems depending on their mass. It is a free use software created as a college project." TextWrapping="Wrap" />
-                <HyperlinkButton Margin="0,40,0,0"  NavigateUri="https://github.com/fogg928s4/morris">
+                <HyperlinkButton Margin="0,40,0,0"  NavigateUri="https://github.com/fogg928s4/morris" Background="{StaticResource TextOnAccentFillColorSecondaryBrush}">
 
                     <StackPanel>
                         <TextBlock FontSize="16" Text="Checkout the Repository" FontWeight="Bold"/>
